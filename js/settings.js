@@ -65,7 +65,9 @@
                 });
                 alert(errors.join('\n'));
             } else {
+                loader.show();
                 inno.setProperties(editor.getValue(), function (status) {
+                    loader.hide();
                     if (status) {
                         alert('Settings were saved.');
                     }

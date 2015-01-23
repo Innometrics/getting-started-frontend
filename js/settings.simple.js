@@ -35,7 +35,9 @@
             "arraySetting":  $(arraySetting).val()
         };
 
+        loader.show();
         inno.setProperties(values, function (status) {
+            loader.hide();
             if (status) {
                 alert('Settings were saved.');
             }
